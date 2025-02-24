@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-800 lg:bg-slate-800">
+
+
+    <section class="max-w-md min-h-screen mx-auto bg-base-200 flex justify-center items-center">
+
+        <div class="space-y-10">
+            <div class="flex justify-center items-center">
+
+                <div class="z-0 w-full">
+                    <div class="flex relative justify-center items-center">
+                        <img class="w-[75%]  absolute -top-15 " src="circle.png" alt="">
+                    </div>
+                    <div class="flex justify-center items-center ">
+                        <img class="" src="Group.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <form action="" class="flex z-1 justify-center items-center bg-linear-to-r/srgb from-[#FFFFFF] to-[#FFFFFF]">
+                <fieldset class="fieldset w-xs border  border-base-100 p-4 rounded-box h-auto ">
+                    <legend class="fieldset-legend text-xl">Login</legend>
+
+                    <label class="fieldset-label text-black font-semibold">Account Number</label>
+                    <input value="124567895678" id="account-number" type="number" required class="input border-none  bg-[#F4F5F7]" placeholder="Account Number" />
+
+                
+
+                    <label class="fieldset-label text-black  font-semibold">4 Digit Pin</label>
+                    <input value="1234" id="pin" type="password" required class="input border-none bg-[#F4F5F7]" placeholder="Your Password" />
+
+                    <button id="login-id" class="btn rounded-md text-white mt-4 bg-[#0874F2]">Login</button>
+                </fieldset>
+            </form>
+        </div>
+
+    </section>
+
+
+
+    <script src="login.js"></script>
+</body>
+
+</html>
