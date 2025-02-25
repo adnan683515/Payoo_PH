@@ -38,14 +38,16 @@
                         <img src="Group.png" alt="">
                     </div>
                     <div class="flex flex-col gap-2">
-                        <h4 class="outfit font-bold ">$54000</h4>
+                        <h4 id="totalAmmount" class="outfit font-bold ">$54000</h4>
                         <p class="font1 outfit">Available Balance</p>
                     </div>
                 </div>
             </div>
 
             <div>
-                <h3 class="outfit">logout <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i></h3>
+                <a href="index.html">
+                    <h3 class="outfit">logout <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i></h3>
+                </a>
             </div>
         </nav>
         <hr class="mt-4 border-slate-300">
@@ -66,7 +68,7 @@
                 </div>
 
                 <div class="grid grid-cols-3 gap-4">
-                    <div class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
+                    <div id="addmoney-click" class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
                         <div class="space-y-2">
                             <div class="flex justify-center items-center">
                                 <img src="wallet 1.png" alt="">
@@ -75,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
+                    <div id="cashout-click" class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
                         <div class="space-y-2">
                             <div class="flex justify-center items-center">
                                 <img src="wallet 1.png" alt="">
@@ -128,7 +130,7 @@
 
         <!-- Add Money Section -->
 
-        <section class="flex flex-col gap-4 pt-8">
+        <section id="add-money-section" class="flex flex-col gap-4 pt-8">
 
             <div class="">
                 <h3 class="pl-5" >Add Money</h3>
@@ -136,11 +138,11 @@
 
             <div class="flex   justify-center    items-center">
 
-                <form action="" class=" w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
+                <form id="addmoneyform" onsubmit="addMoneyFormHandle(event)" action="" class="w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
 
                     <fieldset class="fieldset ">
                         <legend class="fieldset-legend">Select A Bank</legend>
-                        <select class="select bg-slate-100 border-none rounded-full">
+                        <select required class="select bg-slate-100 border-none rounded-full">
                             <option disabled selected>Select Bank</option>
                             <option value="DBBL">DBBL</option>
                             <option value="IBBL">IBBL</option>
@@ -152,25 +154,62 @@
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Account Number</legend>
-                        <input type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
+                        <input id="accountNumberForAddmoney" value="124567895678" required type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
 
                     </fieldset>
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Add Ammount</legend>
-                        <input type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Ammount" />
+                        <input id="ammount"   type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Ammount" required />
 
                     </fieldset>
 
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Pin Number</legend>
-                        <input type="password" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
+                        <input id="addMoneypin" value="1234" required type="password" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
 
                     </fieldset>
 
                     <div class="pt-3">
-                        <button class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Add Money</button>
+                        <button type="submit" id="add-money-btn-id" class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Add Money</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+
+        <section id="cashout-section" class="flex flex-col gap-4 pt-8">
+
+            <div class="">
+                <h3 class="pl-5" >CashOut</h3>
+            </div>
+
+            <div class="flex   justify-center    items-center">
+
+                <form id="withdrawmoneyform" action="" class="w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Account Number</legend>
+                        <input id="accountNumberForwithdraw" value="124567895678" required type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
+
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Withdraw Ammount</legend>
+                        <input id="withdrawammount"   type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Ammount" required />
+
+                    </fieldset>
+
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Pin Number</legend>
+                        <input id="withdrawMoneypin" value="1234" required type="password" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
+
+                    </fieldset>
+
+                    <div class="pt-3">
+                        <button type="submit" id="widthraw-money-btn-id" class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Widthdraw Money</button>
                     </div>
                 </form>
 
@@ -181,6 +220,7 @@
     </main>
 
     <script src="paybill.js"></script>
+    <script src="toggle.js"></script>
 </body>
 
 </html>
