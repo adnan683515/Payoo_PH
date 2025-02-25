@@ -51,7 +51,7 @@
         <hr class="mt-4 border-slate-300">
     </header>
 
-    <main class="outfit bg-white px-2  max-w-md   pb-2 pt-2  mx-auto">
+    <main class="outfit bg-slate-100 px-2  max-w-md   pb-2  mx-auto">
 
         <!-- welcome section -->
         <section class="py-4">
@@ -67,14 +67,12 @@
 
                 <div class="grid grid-cols-3 gap-4">
                     <div class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
-                        <a href="addmoney.html">
-                            <div class="space-y-2">
-                                <div class="flex justify-center items-center">
-                                    <img src="wallet 1.png" alt="">
-                                </div>
-                                <h3 class="font1 outfit">Add Money</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-center items-center">
+                                <img src="wallet 1.png" alt="">
                             </div>
-                        </a>
+                            <h3 class="font1 outfit">Add Money</h3>
+                        </div>
                     </div>
 
                     <div class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
@@ -91,7 +89,7 @@
                             <div class="flex justify-center items-center">
                                 <img src="wallet 1.png" alt="">
                             </div>
-                            <h3 class="font1 outfit">Transfer Money</h3>
+                            <h5 class="font1 outfit text-center">Transfer Money</h5>
                         </div>
                     </div>
 
@@ -128,87 +126,56 @@
 
         </section>
 
+        <!-- Add Money Section -->
 
-        <section>
+        <section class="flex flex-col gap-4 pt-8">
 
-
-            <div class="flex justify-between">
-                <h2 class="font-bold">Last Payment</h2>
-                <h4 class="font1">view All</h4>
+            <div class="">
+                <h3 class="pl-5" >Add Money</h3>
             </div>
 
-            <div class="flex flex-col gap-3 mt-2">
-                <div class="flex justify-between border bg-white border-slate-300 px-4 rounded-md ">
+            <div class="flex   justify-center    items-center">
 
-                    <div class="flex gap-3">
-                        <div class="flex justify-center items-center">
-                            <img src="wallet 1.png" alt="">
-                        </div>
+                <form action="" class=" w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
 
-                        <div>
-                            <h2 class="font-semibold font1 pt-1 text-xl">Electricity Bill</h2>
-                            <h4 class="font1">Today 01:44 AM</h4>
-                        </div>
+                    <fieldset class="fieldset ">
+                        <legend class="fieldset-legend">Select A Bank</legend>
+                        <select class="select bg-slate-100 border-none rounded-full">
+                            <option disabled selected>Select Bank</option>
+                            <option>DBBL</option>
+                            <option>ISLAMI BANK</option>
+                            <option>SONALI BANK</option>
+                        </select>
+
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Account Number</legend>
+                        <input type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
+
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Add Ammount</legend>
+                        <input type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Ammount" />
+
+                    </fieldset>
+
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Pin Number</legend>
+                        <input type="password" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
+
+                    </fieldset>
+
+                    <div class="pt-3">
+                        <button class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Add Money</button>
                     </div>
+                </form>
 
-
-                    <div class="flex justify-center items-center">
-                        <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
-                    </div>
-                </div>
-
-                <div class="flex justify-between border bg-white border-slate-300 px-4 rounded-md ">
-                    <div class="flex gap-3">
-                        <div class="flex justify-center items-center">
-                            <img src="wallet 1.png" alt="">
-                        </div>
-                        <div>
-                            <h2 class="font-semibold font1 pt-1  text-xl">Bank Deposit</h2>
-                            <h4 class="font1">Today 01:44 AM</h4>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-center items-center">
-                        <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
-                    </div>
-                </div>
-
-
-                <div class="flex justify-between border bg-white border-slate-300 px-4 rounded-md ">
-                    <div class="flex gap-3">
-                        <div class="flex justify-center items-center">
-                            <img src="wallet 1.png" alt="">
-                        </div>
-                        <div>
-                            <h2 class="font-semibold font1 pt-1  text-xl">Mobile Recharge</h2>
-                            <h4 class="font1">Today 01:44 AM</h4>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-center items-center">
-                        <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
-                    </div>
-                </div>
-
-                <div class="flex justify-between border bg-white border-slate-300 px-4 rounded-md ">
-                    <div class="flex gap-3">
-                        <div class="flex justify-center items-center">
-                            <img src="wallet 1.png" alt="">
-                        </div>
-                        <div>
-                            <h2 class="font-semibold font1 pt-1  text-xl">Gas Bill</h2>
-                            <h4 class="font1">Today 01:44 AM</h4>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-center items-center">
-                        <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
-                    </div>
-                </div>
             </div>
-
-
         </section>
+
 
     </main>
 </body>
