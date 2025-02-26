@@ -63,12 +63,14 @@
 
                 <div class="flex gap-3 flex-col">
                     <h1 class="font-bold">🔥 Welcome to Payooo!</h1>
-                    <p class=" w-[75%] outfit font1">Enjoy easy and convenient financial services with us. Cashout charge
+                    <p class=" w-[75%] outfit font1">Enjoy easy and convenient financial services with us. Cashout
+                        charge
                         is low and </p>
                 </div>
 
                 <div class="grid grid-cols-3 gap-4">
-                    <div id="addmoney-click" class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
+                    <div id="addmoney-click"
+                        class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
                         <div class="space-y-2">
                             <div class="flex justify-center items-center">
                                 <img src="wallet 1.png" alt="">
@@ -77,7 +79,8 @@
                         </div>
                     </div>
 
-                    <div id="cashout-click" class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
+                    <div id="cashout-click"
+                        class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
                         <div class="space-y-2">
                             <div class="flex justify-center items-center">
                                 <img src="wallet 1.png" alt="">
@@ -114,7 +117,7 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
+                    <div id="transection-box" class="flex flex-col justify-center items-center border rounded-md border-slate-300 py-3">
                         <div class="space-y-2">
                             <div class="flex justify-center items-center">
                                 <img src="wallet 1.png" alt="">
@@ -130,15 +133,16 @@
 
         <!-- Add Money Section -->
 
-        <section id="add-money-section" class="flex flex-col gap-4 pt-8">
+        <section   id="add-money-section" class="flex cursor-pointer flex-col gap-4 pt-8">
 
             <div class="">
-                <h3 class="pl-5" >Add Money</h3>
+                <h3 class="pl-5">Add Money</h3>
             </div>
 
             <div class="flex   justify-center    items-center">
 
-                <form id="addmoneyform" onsubmit="addMoneyFormHandle(event)" action="" class="w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
+                <form id="addmoneyform" onsubmit="addMoneyFormHandle(event)" action=""
+                    class="w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
 
                     <fieldset class="fieldset ">
                         <legend class="fieldset-legend">Select A Bank</legend>
@@ -154,25 +158,29 @@
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Account Number</legend>
-                        <input id="accountNumberForAddmoney" value="124567895678" required type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
+                        <input id="accountNumberForAddmoney" value="124567895678" required type="number"
+                            class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
 
                     </fieldset>
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Add Ammount</legend>
-                        <input id="ammount"   type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Ammount" required />
+                        <input id="ammount" type="number" class="input rounded-full bg-slate-100 border-none"
+                            placeholder="Enter Your Ammount" required />
 
                     </fieldset>
 
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Pin Number</legend>
-                        <input id="addMoneypin" value="1234" required type="password" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
+                        <input id="addMoneypin" value="1234" required type="password"
+                            class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
 
                     </fieldset>
 
                     <div class="pt-3">
-                        <button type="submit" id="add-money-btn-id" class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Add Money</button>
+                        <button type="submit" id="add-money-btn-id"
+                            class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Add Money</button>
                     </div>
                 </form>
 
@@ -183,35 +191,49 @@
         <section id="cashout-section" class="flex flex-col gap-4 pt-8">
 
             <div class="">
-                <h3 class="pl-5" >CashOut</h3>
+                <h3 class="pl-5">CashOut</h3>
             </div>
 
             <div class="flex   justify-center    items-center">
 
-                <form id="withdrawmoneyform" action="" class="w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
+                <form onsubmit="CashOutMoneyHandle(event)" id="withdrawmoneyform" action=""
+                    class="w-full lg:w-[90%] bg-white rounded-md p-3 pl-5 lg:m-2 lg:pl-8">
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Account Number</legend>
-                        <input id="accountNumberForwithdraw" value="124567895678" required type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
+                        <input id="accountNumberForwithdraw" value="124567895678" required type="number"
+                            class="input rounded-full bg-slate-100 border-none" placeholder="Type here" />
 
                     </fieldset>
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Withdraw Ammount</legend>
-                        <input id="withdrawammount"   type="number" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Ammount" required />
+                        <input id="withdrawammount" type="number" class="input rounded-full bg-slate-100 border-none"
+                            placeholder="Enter Your Ammount" required />
 
                     </fieldset>
 
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Pin Number</legend>
-                        <input id="withdrawMoneypin" value="1234" required type="password" class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
-
+                        <input required id="withdrawMoneypin" value="1234" type="password"
+                            class="input rounded-full bg-slate-100 border-none" placeholder="Enter Your Pin" />
                     </fieldset>
 
                     <div class="pt-3">
-                        <button type="submit" id="widthraw-money-btn-id" class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Widthdraw Money</button>
+                        <button id="widthraw-money-btn-id"
+                            class="btn rounded-full w-[100%] lg:w-[90%] bg-[#0874F2] text-white ">Widthdraw
+                            Money</button>
                     </div>
                 </form>
+
+            </div>
+        </section>
+
+        <section id="transection-section">
+
+            <h2 class="text-center text-blue-900">Transection History</h2>
+            <hr>
+            <div id="transection-container" class="flex flex-col gap-3 m-2">
 
             </div>
         </section>
@@ -219,8 +241,12 @@
 
     </main>
 
+
+
+    <script src="transection.js"></script>
     <script src="paybill.js"></script>
-    <script src="toggle.js"></script>
+    <script src="utilites/toggle.js"></script>
+ 
 </body>
 
 </html>
